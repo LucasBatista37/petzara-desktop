@@ -45,11 +45,13 @@
     },
     "mac": {
       "icon": "assets/icon.icns",
+      "artifactName": "Petzara.dmg",
       "category": "public.app-category.business",
       "target": ["dmg"]
     },
     "linux": {
       "icon": "assets/icon.png",
+      "artifactName": "Petzara.AppImage",
       "target": ["AppImage"]
     },
     "publish": {
