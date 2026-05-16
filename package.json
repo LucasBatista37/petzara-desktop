@@ -47,6 +47,9 @@
       "icon": "assets/icon.icns",
       "artifactName": "Petzara.dmg",
       "category": "public.app-category.business",
+      "identity": null,
+      "gatekeeperAssess": false,
+      "hardenedRuntime": false,
       "target": ["dmg"]
     },
     "linux": {

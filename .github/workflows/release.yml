@@ -46,9 +46,9 @@ jobs:
         run: npm run build:mac
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Sem certificado: gera DMG não-assinado (usuário precisa
-          # clicar com botão direito → Abrir na primeira execução)
           CSC_IDENTITY_AUTO_DISCOVERY: false
+          CSC_LINK: ""
+          CSC_KEY_PASSWORD: ""
       - name: Upload
         uses: softprops/action-gh-release@v2
         with:
