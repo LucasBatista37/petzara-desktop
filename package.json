@@ -25,6 +25,7 @@
     ],
     "win": {
       "icon": "assets/icon.ico",
+      "artifactName": "Petzara-Setup.exe",
       "target": [
         {
           "target": "nsis",
