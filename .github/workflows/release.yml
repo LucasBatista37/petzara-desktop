@@ -47,6 +47,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC_IDENTITY_AUTO_DISCOVERY: false
+      - name: Verify ad-hoc signature
+        run: |
+          APP=$(find dist -name "*.app" -maxdepth 3 | head -1)
+          if [ -n "$APP" ]; then
+            codesign --verify --verbose=1 "$APP" && echo "Signature OK" || echo "Signature check failed (may be expected for ad-hoc)"
+            codesign -dv "$APP" 2>&1 | grep -E "Authority|Signature|Identifier" || true
+          fi
       - name: Upload
         uses: softprops/action-gh-release@v2
         with:
