@@ -16,12 +16,14 @@
   "build": {
     "appId": "com.petzara.desktop",
     "productName": "Petzara",
+    "afterPack": "./scripts/afterPack.js",
     "directories": {
       "output": "dist"
     },
     "files": [
       "src/**/*",
-      "assets/**/*"
+      "assets/**/*",
+      "scripts/**/*"
     ],
     "win": {
       "icon": "assets/icon.ico",
